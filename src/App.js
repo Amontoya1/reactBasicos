@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Componente from './components/Componentes'
+import Propiedades from './components/Propiedades'
 
 function App() {
   return (
@@ -7,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edita <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -17,7 +19,22 @@ function App() {
         >
           Learn React
         </a>
+      <section>
+        <Componente></Componente>
+        <hr/>
+        <Propiedades
+         cadena="Esto es una cadena de texto"
+         numero = {19}
+         booleano = {true}
+         arreglo = {[1, 2, 3]}
+         objeto={{nome:"Andrea", email:"andreamontoya@gmail.com"}}
+         funcion={num => num * num}
+         elementoReact={<i>Esto es un elemento React</i>}
+         componenteReact={<Componente/>}
+         />
+      </section>
       </header>
+     
     </div>
   );
 }
